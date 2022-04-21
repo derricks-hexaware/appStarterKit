@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet, Alert,TouchableWithoutFeedback,Keyboard } from "react-native";
-import { Input, Button } from "react-native-elements";
+import { Text, View, StyleSheet, Alert,TouchableWithoutFeedback,Keyboard, Button, TextInput } from "react-native";
 import Style from "./Style";
 
 export class ForgotPassword extends Component {
@@ -26,7 +25,7 @@ export class ForgotPassword extends Component {
     return (
       <TouchableWithoutFeedback onPress={()=>{Keyboard.dismiss()}}>
       <View style={Style.container}>
-        <Input
+        <TextInput
           placeholder="E-mail"
           leftIcon={<MaterialIcons name="email" size={15} color="black" />}
           value={this.state.username}
