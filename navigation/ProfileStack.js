@@ -3,7 +3,7 @@ import { Text, View, TouchableOpacity, Button } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Details from "../components/details/Details";
 import { headerColor, secondaryColor } from "../constants";
-import Profile from "../components/Profile";
+import Profile from "../components/profile/Profile";
 
 const Stack = createStackNavigator();
 
