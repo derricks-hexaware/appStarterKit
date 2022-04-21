@@ -2,9 +2,6 @@ import React, { Component, useState } from "react";
 import { Text, View, StyleSheet, ScrollView, Image, TouchableOpacity } from "react-native";
 import { Divider } from "react-native-elements";
 import { primaryColor } from "../constants";
-import * as firebase from "firebase";
-import "firebase/firestore";
-import { db } from "../App";
 import _ from "lodash";
 import Style from "./Style";
 
