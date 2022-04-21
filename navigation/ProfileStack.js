@@ -1,19 +1,13 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, Button } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Details from "../components/Details";
+import Details from "../components/details/Details";
 import { headerColor, secondaryColor } from "../constants";
-import { Icon } from "react-native-elements";
-import * as firebase from "firebase";
 import Profile from "../components/Profile";
-import { AntDesign } from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 
 export class ProfileStack extends Component {
-  handleLogout = () => {
-    firebase.auth().signOut();
-  };
   render() {
     return (
       <Stack.Navigator
