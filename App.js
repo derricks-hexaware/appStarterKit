@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View, LogBox } from "react-native";
+import { StyleSheet, Text, View, LogBox, StatusBar } from "react-native";
 import { primaryColor } from "./constants";
 import TabNavigation from "./navigation/TabNavigation"; 
-import { NavigationContainer } from "@react-navigation/native";
-import { ThemeProvider } from "react-native-elements";
+import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import AuthStack from "./navigation/AuthStack";
+import { ThemeProvider } from "react-native-elements";
+
 
 const theme = {
   colors: {
