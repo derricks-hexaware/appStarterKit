@@ -1,4 +1,3 @@
-import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import { StyleSheet, Text, View, LogBox } from "react-native";
 import { primaryColor } from "./constants";
@@ -20,12 +19,12 @@ if (LogBox) {
 
 export class App extends Component {
   state = {
-    isAuthenticated: false,
+    isAuthenticated: true,
   };
 
-  componentDidMount() {
-    firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
-  }
+//   componentDidMount() {
+//     firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
+//   }
 
   onAuthStateChanged = (user) => {
     this.setState({ isAuthenticated: !!user });
