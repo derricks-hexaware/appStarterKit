@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, Button } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Details from "../components/Details";
+import Details from "../components/details/Details";
 import { headerColor, secondaryColor } from "../constants";
-import { Icon } from "react-native-elements";
 import Search from "../components/search/Search";
 
 const Stack = createStackNavigator();
