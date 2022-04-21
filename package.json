@@ -21,7 +21,8 @@
     "react-native-editable-list": "*",
     "react-native-gesture-handler": "~1.10.2",
     "@react-navigation/bottom-tabs": "*",
-    "react-native-safe-area-context": "3.3.2"
+    "react-native-safe-area-context": "3.3.2",
+    "react-native-vector-icons": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
