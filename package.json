@@ -1,0 +1,31 @@
+{
+  "main": "node_modules/react-native/AppEntry.js",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native start --android",
+    "ios": "react-native start --ios",
+    "web": "react-native start --web",
+    "eject": "react-native eject"
+  },
+  "dependencies": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "react-native": "0.64.3",
+    "react-native-web": "0.17.1",
+    "lodash": "*",
+    "react-iframe": "*",
+    "react-native-paper": "4.9.2",
+    "react-native-screens": "~3.8.0",
+    "react-native-elements": "*",
+    "@react-navigation/stack": "*",
+    "@react-navigation/native": "*",
+    "react-native-editable-list": "*",
+    "react-native-gesture-handler": "~1.10.2",
+    "@react-navigation/bottom-tabs": "*",
+    "react-native-safe-area-context": "3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9"
+  },
+  "private": true
+}
