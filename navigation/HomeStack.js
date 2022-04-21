@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Text, View, TouchableOpacity, Button, StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Details from "../components/Details";
-import Home from "../components/Home";
+import Details from "../components/details/Details";
+import Home from "../components/home/Home";
 import { headerColor, secondaryColor } from "../constants";
 
 const Stack = createStackNavigator();
