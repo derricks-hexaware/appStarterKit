@@ -15,14 +15,14 @@
     "lodash": "*",
     "react-iframe": "*",
     "react-native-screens": "~3.8.0",
-    "react-native-elements": "*",
     "@react-navigation/stack": "*",
     "@react-navigation/native": "*",
     "react-native-editable-list": "*",
     "react-native-gesture-handler": "~1.10.2",
     "@react-navigation/bottom-tabs": "*",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-vector-icons": "*"
+    "react-native-vector-icons": "*",
+    "react-native-cards": "^1.1.4",
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
