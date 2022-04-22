@@ -8,7 +8,6 @@ import {
   RefreshControl,
   Image,
 } from "react-native";
-import { Card } from "react-native-elements";
 import { primaryColor, tabIconColor } from "../../constants";
 import _ from "lodash";
 import Style from "./Style";
