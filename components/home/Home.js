@@ -6,9 +6,10 @@ import {
   View,
   StyleSheet,
   Image,
-  Platform
+  Platform, 
+  Button
 } from "react-native";
-import { Button, Card } from "react-native-elements";
+import { Card } from "react-native-cards";
 import _ from "lodash";
 import Style from "./Style";
 
