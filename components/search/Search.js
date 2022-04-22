@@ -15,7 +15,8 @@ import {
   TouchableHighlight,
   ImageBackground
 } from "react-native";
-import { SearchBar, Card } from "react-native-elements";
+import { SearchBar } from "react-native-dynamic-search-bar";
+import { Cards } from "react-native-cards";
 import { tabIconColor, tabBackgroundColor, primaryColor } from "../../constants";
 import _ from "lodash";
 import Style from "./Style";
