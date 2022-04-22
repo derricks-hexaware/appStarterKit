@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Text, View, StyleSheet, Alert, Image, Platform, KeyboardAvoidingView } from "react-native";
-import { Input, Button } from "react-native-elements";
+import { Text, View, StyleSheet, Alert, Image, Platform, KeyboardAvoidingView, TextInput, Button } from "react-native";
 import Style from "./Style";
 
 export class Login extends Component {
@@ -30,13 +29,13 @@ export class Login extends Component {
   render() {
     return (
       <KeyboardAvoidingView style={Style.container}>
-        <Input
+        <TextInput
           placeholder="E-mail"
           leftIcon={<MaterialIcons name="email" size={15} color="black" />}
           value={this.state.username}
           onChangeText={(text) => this.setState({ username: text })}
         />
-        <Input
+        <TextInput
           placeholder="Password"
           leftIcon={<MaterialIcons name="lock" size={15} color="black" />}
           secureTextEntry={true}
