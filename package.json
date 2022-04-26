@@ -8,23 +8,18 @@
     "eject": "react-native eject"
   },
   "dependencies": {
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-native": "0.64.3",
-    "react-native-web": "0.17.1",
-    "lodash": "*",
-    "react-iframe": "*",
+    "prop-types": "^15.7.2",
+    "react-native-svg": "12.1.1",
     "react-native-screens": "~3.8.0",
-    "@react-navigation/stack": "*",
-    "@react-navigation/native": "*",
-    "react-native-editable-list": "*",
+    "@react-navigation/stack": "^6.0.7",
+    "react-native-appearance": "~0.3.3",
+    "react-native-reanimated": "~2.2.0",
+    "@react-navigation/native": "^6.0.2",
     "react-native-gesture-handler": "~1.10.2",
-    "@react-navigation/bottom-tabs": "*",
+    "@react-navigation/bottom-tabs": "^6.0.5",
     "react-native-safe-area-context": "3.3.2",
-    "react-native-vector-icons": "*",
-    "react-native-cards": "^1.1.4",
-    "react-native-dynamic-search-bar": "^2.0.2",
-  },
+    "@react-native-community/masked-view": "0.1.10"
+  }
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
