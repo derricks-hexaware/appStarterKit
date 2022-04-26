@@ -1,55 +1,53 @@
-import React, { Component } from "react";
-import { StyleSheet, Text, View, LogBox, StatusBar } from "react-native";
-import { primaryColor } from "./constants";
-import TabNavigation from "./navigation/TabNavigation"; 
-import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import AuthStack from "./navigation/AuthStack";
-import { ThemeProvider } from "react-native-elements";
+import * as React from 'react';
+import { Appearance, StatusBar } from 'react-native';
+import { device, func } from './src/constants';
 
+// main navigation stack
+import RootStack from './src/navigation/RootStack';
 
-const theme = {
-  colors: {
-    primary: primaryColor, 
-  },
-};
+class App extends React.Component {
+  constructor(props) {
+    super(props);
 
-if (LogBox) {
-  LogBox.ignoreLogs(["Setting a timer"]);
-  LogBox.ignoreLogs(["Require cycle"]);
-}
+    this.state = {
+      isLoading: true,
+      theme: 'light'
+    };
 
-export class App extends Component {
-  state = {
-    isAuthenticated: true,
-  };
+    this.updateTheme = this.updateTheme.bind(this);
+  }
 
-//   componentDidMount() {
-//     firebase.auth().onAuthStateChanged(this.onAuthStateChanged);
-//   }
+  componentDidMount() {
+    // get system preference
+    const colorScheme = Appearance.getColorScheme();
+    console.log('react-native::Appearance', colorScheme);
 
-  onAuthStateChanged = (user) => {
-    this.setState({ isAuthenticated: !!user });
-  };
+    // if light or dark
+    if (colorScheme !== 'no-preference') {
+      this.setState({
+        theme: colorScheme
+      });
+    }
+  }
+
+  updateTheme(themeType) {
+    this.setState({
+      theme: themeType
+    });
+  }
 
   render() {
-    return (
-      <View style={styles.container}>
-        <ThemeProvider theme={theme}>
-          <StatusBar style="auto" />
-          <NavigationContainer>
-            {this.state.isAuthenticated ? <TabNavigation /> : <AuthStack />}
-          </NavigationContainer>
-        </ThemeProvider>
-      </View>
-    );
-  } 
-}
+    const { isLoading, theme } = this.state;
+    const iOSStatusType = theme === 'light' ? 'dark-content' : 'light-content';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-  },
-});
+    return (
+      <React.Fragment>
+        <StatusBar barStyle={device.iOS ? iOSStatusType : 'light-content'} />
+
+        <RootStack theme={theme} />
+      </React.Fragment>
+    );
+  }
+}
 
 export default App;
